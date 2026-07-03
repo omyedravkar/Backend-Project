@@ -17,6 +17,15 @@ import connectDB  from "./db/index.js";
 
 
 connectDB()
+//it returns promises a async function 
+.then(()=>{
+   app.listen(process.env.PORT || 8000 , ()=>{
+      console.log(`Server is running on the port ${process.env.PORT}`);
+   })
+})
+.catch((err)=>{
+ console.log("Failed to connect to monogoDB :",err );
+})
  
 /* 
 
