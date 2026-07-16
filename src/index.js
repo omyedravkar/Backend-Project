@@ -10,11 +10,9 @@ import mongoose from "mongoose";
 
 import { DB_NAME } from "./constants.js";
 import express from "express"
- const app = express()
-
 import connectDB  from "./db/index.js";
 
-
+import { app } from "./app.js"; 
 
 connectDB()
 //it returns promises a async function 
